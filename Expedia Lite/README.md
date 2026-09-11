@@ -43,7 +43,7 @@ Open http://127.0.0.1:5173. Stop each server with Ctrl+C. API documentation: htt
 
 Search `Harbor Lantern Hotel`: expect T001 and T009, each two nights at $150/night ($300/stay). Search `No Such Hotel`: expect a clear empty result. Partial names and capitalization are ignored; blank input lists all 12 stays. Search is by hotel name, not city. Dates are fixed offered stays; sample dates are not filtered against today's date.
 
-See [report.md](report.md) for observed browser checks and screenshots. The student confirmed the VS Code source review and both required browser checks. Repository: [expedia-lite](https://github.com/kuanenlee0925-blip/expedia-lite). The `part1` tag preserves the reviewed Part 1 application checkpoint; the report records its exact hash. Give the instructor access to this private repository before submission.
+See [report.md](report.md) for observed browser checks and screenshots. The student confirmed the VS Code source review and both required browser checks. Repository: [expedia-lite](https://github.com/kuanenlee0925-blip/expedia-lite). The `part1` tag preserves the reviewed Part 1 application checkpoint; the report records its exact hash. The repository is public, so the instructor can open the report and evidence links without an invitation.
 
 ## Project context
 

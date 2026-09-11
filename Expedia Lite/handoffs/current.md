@@ -12,4 +12,4 @@ Dependency imports and production frontend build passed. Browser checks passed f
 
 No course calculator starter was available. Part 2 is intentionally not implemented. GitHub repository: [expedia-lite](https://github.com/kuanenlee0925-blip/expedia-lite). Preserve the reviewed application with the `part1` tag. The finalized report records that checkpoint hash in a documentation-only follow-up commit.
 
-Next: give the instructor access to the private repository, verify the report links, and upload report.md to Part 1 — Submission. Then, when requested, create a Part 2 feature branch and implement SQLite seeding once plus booking CRUD without changing the Part 1 checkpoint.
+The repository is now public, and the report evidence links were checked without authentication. Next: upload report.md to Part 1 — Submission. Then, when requested, create a Part 2 feature branch and implement SQLite seeding once plus booking CRUD without changing the Part 1 checkpoint.
