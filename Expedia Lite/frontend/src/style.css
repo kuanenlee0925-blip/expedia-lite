@@ -1,0 +1,30 @@
+:root { font-family: system-ui, sans-serif; color: #19364d; background: #f4f7fa; font-synthesis: none; }
+* { box-sizing: border-box; }
+body { margin: 0; }
+main { max-width: 1250px; margin: 0 auto; padding: 48px 28px; }
+header { margin-bottom: 30px; }
+.eyebrow { font-size: 12px; font-weight: 700; letter-spacing: .13em; color: #526b7b; }
+h1 { font-size: 38px; letter-spacing: -.04em; margin: 10px 0; }
+header > p:last-child { color: #526b7b; font-size: 18px; }
+.search-panel { background: white; padding: 26px; border: 1px solid #d4dee6; border-radius: 12px; }
+label { display: block; font-weight: 650; margin-bottom: 10px; }
+.search-row { display: flex; gap: 12px; max-width: 780px; }
+input { flex: 1; min-width: 0; padding: 13px 15px; border: 1px solid #8b9fac; border-radius: 6px; font: inherit; }
+button { background: #193c55; color: white; border: none; border-radius: 6px; padding: 13px 30px; font: inherit; font-weight: 650; cursor: pointer; }
+button:hover { background: #285776; } button:disabled { opacity: .65; cursor: wait; }
+:focus-visible { outline: 3px solid #2682bd; outline-offset: 3px; }
+.muted { color: #536a7b; font-size: 14px; }
+#search-help { margin-bottom: 0; }
+.results { margin-top: 30px; min-height: 150px; }
+h2 { font-size: 22px; margin-bottom: 6px; }
+.table-scroll { overflow-x: auto; border: 1px solid #d4dee6; border-radius: 9px; margin-top: 20px; background: white; }
+table { width: 100%; border-collapse: collapse; text-align: left; font-size: 14px; }
+th { background: #eaf0f5; color: #304c60; font-size: 12px; }
+th, td { padding: 17px 14px; border-bottom: 1px solid #dde5eb; }
+tbody tr:last-child td { border-bottom: none; }
+td span { display: block; color: #536a7b; font-size: 12px; margin-top: 5px; }
+.date { white-space: nowrap; }
+footer { border-top: 1px solid #d4dee6; padding-top: 20px; margin-top: 30px; color: #536a7b; font-size: 12px; }
+.error { padding: 18px; background: #fff0ef; color: #8b251d; border-radius: 6px; }
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+@media (max-width: 600px) { main { padding: 26px 16px; } h1 { font-size: 32px; } .search-panel { padding: 18px; } .search-row { flex-direction: column; } }
