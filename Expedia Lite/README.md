@@ -2,6 +2,12 @@
 
 A local classroom travel application: Vue frontend, FastAPI API, and Python CSV search. Part 1 only. The supplied fictional data is preserved in backend/data/; no real reservations are made.
 
+## Part 2 demonstration video
+
+[Watch the Part 2 demonstration (MP4, approximately 21 MB)](https://github.com/kuanenlee0925-blip/expedia-lite/raw/refs/heads/main/media/part2-demonstration.mp4)
+
+This recording was made before the application was renamed from Expedia Lite to Brian Booking Plus, so the earlier name appears in the video. The link opens or downloads the recording, depending on your browser; no GitHub sign-in is required. The published source below is still the Part 1 checkpoint; the Part 2 source update is pending.
+
 ## Setup (Windows PowerShell)
 
 Open a terminal in this `Expedia Lite` folder. Python 3.10+ and Node 22.12+ are required (verified here with Python 3.14.7 and Node 24.20.0).
