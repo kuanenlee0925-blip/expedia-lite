@@ -60,5 +60,6 @@ keyboard-only journey, narrow mobile layout, UI rendering under mocked provider
 failure/empty/quota responses, browser Network-panel credential inspection,
 or a screen-recorded Assignment 2 demonstration. Backend fixtures cover the
 provider error cases; they are not a claim of browser-level verification.
-The tests do not prove future provider coverage or availability. No Git commit,
-push, Canvas submission, or instructor review was performed for this work.
+The tests do not prove future provider coverage or availability. Following verification, application commit `2a979ce81aa70b45c50f962c47b0ba2a27c0ee0e` was published to GitHub
+at the student's explicit request. No Canvas submission or instructor review
+was performed.

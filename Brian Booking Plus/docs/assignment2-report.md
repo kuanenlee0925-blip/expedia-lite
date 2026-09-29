@@ -1,13 +1,13 @@
 # Assignment 2 — hotel search, map, and persistent shortlist
 
-Local report draft, September 29, 2026. This is separate from the older
+Published report draft, September 29, 2026. This is separate from the older
 sample-booking Part 2 report at the project root.
 
 ## Project access and startup
 
 Existing repository: https://github.com/kuanenlee0925-blip/expedia-lite
 
-**Assessed Assignment 2 commit: pending student review and publication.**
+**Assignment 2 application checkpoint:** [2a979ce81aa70b45c50f962c47b0ba2a27c0ee0e](https://github.com/kuanenlee0925-blip/expedia-lite/commit/2a979ce81aa70b45c50f962c47b0ba2a27c0ee0e). Published to main at the student's request; final student review remains pending.
 The earlier booking checkpoint does not include this work. Follow
 [README setup and configuration](../README.md). Open http://127.0.0.1:5173
 with FastAPI on port 8000. The project-root `.env` is backend-only; restart
@@ -65,7 +65,7 @@ Selected prompt/decision evidence:
 - Revised approaches: test syntax correction, closing HTTP errors, and making
   the live results list scrollable are recorded in the verification notes.
 
-Before submitting each part, review the implementation, fill in the assessed
-commit and model, add the relevant new video link, and ensure every linked
+Before submitting each part, review the implementation, confirm the assessed
+commit and fill in the model, add the relevant new video link, and ensure every linked
 artifact is published and accessible to the instructor. Upload the finalized
 report as `report.md`. Screenshots alone do not satisfy the recorded-demo item.

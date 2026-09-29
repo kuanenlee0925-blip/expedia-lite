@@ -27,8 +27,7 @@ observed. The original hotel-name search still returns T001/T009 for Harbor
 Lantern Hotel. See `docs/assignment2-verification.md` for evidence and limits,
 and `docs/assignment2-report.md` for the separate submission draft.
 
-No Assignment 2 Git operations or publication were performed. The older root
-report/video remain for the previous booking assignment. New recorded demo,
-assessed commit, final student review, and model confirmation remain pending.
+Assignment 2 application commit `2a979ce81aa70b45c50f962c47b0ba2a27c0ee0e` was published to GitHub main at the student's explicit request. The older root
+report/video remain for the previous booking assignment. New recorded demo, final student review, and model confirmation remain pending.
 Backend and Vite are running on ports 8000 and 5173. Do not print `.env` or
 provider request URLs. Preserve saved database and unrelated processes.
