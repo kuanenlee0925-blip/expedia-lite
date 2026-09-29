@@ -4,9 +4,9 @@
 
 Repository: [kuanenlee0925-blip/expedia-lite](https://github.com/kuanenlee0925-blip/expedia-lite) (public).
 
-Part 2 was developed on a feature branch. An isolated publication branch, `codex/publish-part2`, contains the SQLite booking application and excludes newer Assignment 2 ZIP/nearby-hotel work. The exact merged application checkpoint will be recorded when publication checks finish.
+Part 2 was developed on a feature branch. An isolated publication branch, `codex/publish-part2`, contains the SQLite booking application and excludes newer Assignment 2 ZIP/nearby-hotel work. Part 2 application checkpoint: [0743984eb768de1605ff62ed8fd0b4b33a4f35e3](https://github.com/kuanenlee0925-blip/expedia-lite/commit/0743984eb768de1605ff62ed8fd0b4b33a4f35e3). This merge into `main` was checked on September 29, 2026. The final report is recorded in a follow-up documentation commit; the application code is unchanged.
 
-Part 1 remains preserved as tag `part1`, commit [db85ff8fe8b0a1b79c216fab49984c557342d440](https://github.com/kuanenlee0925-blip/expedia-lite/commit/db85ff8fe8b0a1b79c216fab49984c557342d440). The completed Part 1 report is archived in docs/part1-report.md.
+Part 1 remains preserved as tag `part1`, commit [db85ff8fe8b0a1b79c216fab49984c557342d440](https://github.com/kuanenlee0925-blip/expedia-lite/commit/db85ff8fe8b0a1b79c216fab49984c557342d440). The completed [Part 1 report](https://github.com/kuanenlee0925-blip/expedia-lite/blob/0743984eb768de1605ff62ed8fd0b4b33a4f35e3/Brian%20Booking%20Plus/docs/part1-report.md) is archived separately.
 
 ## Implementation
 
@@ -36,11 +36,13 @@ Agent browser and restart checks below were performed September 15, 2026. The st
 | Student supplies personal demonstration | Accessible recording for instructor review | Completed: student supplied the September 15 MP4; published on GitHub |
 | Student manually scans Part 2 changes in VS Code | Personal source review | Not separately confirmed in the recorded conversation |
 
-Evidence saved in the repository folder:
+September 29 publication checks: all seven backend tests passed again after the merge into `main`, using temporary databases. A clean frontend dependency install and production build passed; the merged frontend build also passed. The original Part 1 tag still resolves to the same implementation commit. Newer local Assignment 2 files, `.env`, personal databases, dependencies, and generated build output were excluded from this publication.
 
-- [Persisted confirmed and cancelled bookings after server restart](docs/screenshots/part2/07-after-restart.png).
-- [Cancellation retains the new test record](docs/screenshots/part2/10-cancel-history.png).
-- [Deletion removes that test record](docs/screenshots/part2/11-deleted-history.png).
+Evidence saved in the repository:
+
+- [Persisted confirmed and cancelled bookings after server restart](https://github.com/kuanenlee0925-blip/expedia-lite/blob/0743984eb768de1605ff62ed8fd0b4b33a4f35e3/Brian%20Booking%20Plus/docs/screenshots/part2/07-after-restart.png).
+- [Cancellation retains the new test record](https://github.com/kuanenlee0925-blip/expedia-lite/blob/0743984eb768de1605ff62ed8fd0b4b33a4f35e3/Brian%20Booking%20Plus/docs/screenshots/part2/10-cancel-history.png).
+- [Deletion removes that test record](https://github.com/kuanenlee0925-blip/expedia-lite/blob/0743984eb768de1605ff62ed8fd0b4b33a4f35e3/Brian%20Booking%20Plus/docs/screenshots/part2/11-deleted-history.png).
 
 The screenshots above are agent-operated browser evidence.
 
@@ -48,7 +50,7 @@ The screenshots above are agent-operated browser evidence.
 
 ## Project context and next steps
 
-[README](README.md), [AGENTS.md](AGENTS.md), [design note](docs/design.md), [selected prompts](prompts/selected.md), [current handoff](handoffs/current.md), and [student review checklist](docs/review-checklist.md).
+[README](https://github.com/kuanenlee0925-blip/expedia-lite/blob/0743984eb768de1605ff62ed8fd0b4b33a4f35e3/Brian%20Booking%20Plus/README.md), [AGENTS.md](https://github.com/kuanenlee0925-blip/expedia-lite/blob/0743984eb768de1605ff62ed8fd0b4b33a4f35e3/Brian%20Booking%20Plus/AGENTS.md), [design note](https://github.com/kuanenlee0925-blip/expedia-lite/blob/0743984eb768de1605ff62ed8fd0b4b33a4f35e3/Brian%20Booking%20Plus/docs/design.md), [selected prompts](https://github.com/kuanenlee0925-blip/expedia-lite/blob/0743984eb768de1605ff62ed8fd0b4b33a4f35e3/Brian%20Booking%20Plus/prompts/selected.md), [current handoff](https://github.com/kuanenlee0925-blip/expedia-lite/blob/0743984eb768de1605ff62ed8fd0b4b33a4f35e3/Brian%20Booking%20Plus/handoffs/current.md), and [student review checklist](https://github.com/kuanenlee0925-blip/expedia-lite/blob/0743984eb768de1605ff62ed8fd0b4b33a4f35e3/Brian%20Booking%20Plus/docs/review-checklist.md).
 
 The app is a local classroom simulation without authentication, payments, room inventory, or capacity enforcement. Repeated intentional bookings are allowed. The traveler selection resets on page refresh; reselect the traveler to view saved records. A network timeout can leave a write's outcome uncertain, so the app refreshes history and advises checking before retrying. The test client emits a dependency deprecation notice; all tests pass.
 

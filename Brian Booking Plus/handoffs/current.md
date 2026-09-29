@@ -10,6 +10,6 @@ September 15 agent browser checks verified search, frontend CRUD, refresh, and r
 
 ## Publication and next task
 
-The publication branch codex/publish-part2 isolates Assignment 1 Part 2 from newer local Assignment 2 work. The exact application checkpoint and September 29 verification results are recorded in report.md after the merge checks. Keep newer ZIP/nearby-hotel files and personal database records in the local working project. Do not overwrite that work with the isolated publication checkout.
+The publication branch codex/publish-part2 isolates Assignment 1 Part 2 from newer local Assignment 2 work. The feature branch was merged into main at 0743984eb768de1605ff62ed8fd0b4b33a4f35e3. All seven backend tests and the frontend build passed after merging on September 29. report.md records that application checkpoint; a follow-up documentation commit finalizes the report without changing the application. Keep newer ZIP/nearby-hotel files and personal database records in the local working project. Do not overwrite that work with the isolated publication checkout.
 
 Confirm the required student source review, then upload report.md to Canvas. GitHub publication does not submit the assignment. The application is a local simulation without authentication, payments, or inventory enforcement. The test client emits an httpx deprecation notice.
