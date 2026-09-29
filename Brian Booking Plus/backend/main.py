@@ -9,7 +9,11 @@ from uuid import uuid4
 from fastapi import FastAPI, HTTPException, Query, Response
 from pydantic import BaseModel, ConfigDict, Field
 
+from config import geoapify_key_status
 from database import DEFAULT_DB_PATH, connect, initialize
+from zip_lookup import ZipConfigurationError, ZipLookupError, ZipRateLimitError, lookup_zip
+from places import search_hotels
+import shortlist
 
 STAY_SELECT = """SELECT h.hotel_id, h.hotel_name, h.city, h.state, h.nightly_rate_usd,
     t.trip_id, t.trip_name, t.check_in, t.check_out
@@ -71,9 +75,58 @@ def create_app(db_path: Path | None = None):
     @asynccontextmanager
     async def lifespan(app):
         initialize(path)
+        shortlist.initialize_shortlist(path)
         yield
 
     app = FastAPI(title="Brian Booking Plus", version="2.0.0", lifespan=lifespan)
+
+    @app.get('/api/hotels')
+    def hotels(postcode: str = Query(pattern=r'^[0-9]{5}$', min_length=5, max_length=5)):
+        try:
+            result = search_hotels(postcode)
+        except ZipConfigurationError:
+            raise HTTPException(503, 'Hotel search is not configured.') from None
+        except ZipRateLimitError:
+            raise HTTPException(429, 'Service limit reached. Try again later.') from None
+        except ZipLookupError:
+            raise HTTPException(502, 'Hotel search failed. Please try again.') from None
+        if result is None:
+            raise HTTPException(404, f'ZIP {postcode} could not be resolved.')
+        shortlist.remember_results(path, result['hotels'])
+        return result
+
+    @app.get('/api/shortlist')
+    def saved_hotels():
+        return shortlist.list_saved(path)
+
+    @app.post('/api/shortlist')
+    def save_hotel(place_id: str = Query(min_length=1, max_length=2048)):
+        try:
+            created = shortlist.save_place(path, place_id)
+        except LookupError:
+            raise HTTPException(404, 'Search for this hotel before saving it.') from None
+        return {'created': created, 'shortlist': shortlist.list_saved(path)}
+
+    @app.delete('/api/shortlist', status_code=204)
+    def remove_hotel(place_id: str = Query(min_length=1, max_length=2048)):
+        shortlist.remove_place(path, place_id)
+        return Response(status_code=204)
+
+    @app.get("/api/health")
+    def health():
+        return {"status": "ok", "geoapify": geoapify_key_status()}
+
+    @app.get("/api/demo/zip-location")
+    def demo_zip_location(postcode: str = Query(default="16802", pattern=r"^[0-9]{5}$", min_length=5, max_length=5)):
+        try:
+            location = lookup_zip(postcode)
+        except ZipConfigurationError:
+            raise HTTPException(503, "ZIP lookup is not configured.") from None
+        except ZipLookupError:
+            raise HTTPException(502, "ZIP lookup provider request failed.") from None
+        if location is None:
+            raise HTTPException(404, f"ZIP {postcode} could not be resolved.")
+        return location
 
     @app.get("/api/stays", response_model=list[Stay])
     def search_stays(hotel_name: str = Query(default="", max_length=200)):

@@ -2,6 +2,7 @@
 
 Vue and Python/FastAPI travel application with SQLite hotel search and simulated booking CRUD.
 
+- [Assignment 2 hotel search, map, and shortlist report draft](Brian%20Booking%20Plus/docs/assignment2-report.md)
 - [Assignment 1 Part 2 report](Brian%20Booking%20Plus/report.md)
 - [Setup and run instructions](Brian%20Booking%20Plus/README.md)
 - [Part 2 demonstration video](https://github.com/kuanenlee0925-blip/expedia-lite/raw/refs/heads/main/media/part2-demonstration.mp4)

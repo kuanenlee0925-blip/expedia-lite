@@ -1,0 +1,16 @@
+[
+  {
+    "place_id": "51c9378023267753c059159ee117a8654440f00103f90169bed82f00000000920313486f74656c20537461746520436f6c6c656765",
+    "snapshot": {
+      "place_id": "51c9378023267753c059159ee117a8654440f00103f90169bed82f00000000920313486f74656c20537461746520436f6c6c656765",
+      "provider": "geoapify",
+      "name": "Hotel State College",
+      "address": "Hotel State College, 100 West College Avenue, State College, PA 16801, United States of America",
+      "latitude": 40.7941923,
+      "longitude": -77.8617028,
+      "postcode": "16802",
+      "distance_m": 998
+    },
+    "saved_at": "2026-09-29T18:14:55.301Z"
+  }
+]

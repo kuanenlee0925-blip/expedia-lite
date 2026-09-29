@@ -1,5 +1,6 @@
 <script setup>
 import { computed, onMounted, ref, watch } from 'vue'
+import NearbyHotels from './NearbyHotels.vue'
 
 const query = ref('')
 const searchedQuery = ref('')
@@ -18,6 +19,10 @@ const busy = ref(false)
 const notice = ref('')
 const actionError = ref('')
 const pendingDelete = ref('')
+const zipLocation = ref(null)
+const zipLoading = ref(false)
+const zipError = ref('')
+const zipInput = ref('16802')
 const traveler = computed(() => users.value.find(user => user.user_id === selectedUser.value))
 let historyRequest = 0
 const dollars = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 0 })
@@ -41,6 +46,28 @@ async function loadUsers() {
     userError.value = 'Could not load travelers. Check that the backend is running, then retry.'
   } finally {
     usersLoading.value = false
+  }
+}
+
+async function lookupDemoZip() {
+  if (zipLoading.value) return
+  zipLoading.value = true
+  zipLocation.value = null
+  zipError.value = ''
+  const postcode = zipInput.value.trim()
+  if (!/^[0-9]{5}$/.test(postcode)) {
+    zipError.value = 'Enter a five-digit U.S. ZIP code.'
+    zipLoading.value = false
+    return
+  }
+  try {
+    zipLocation.value = await request(`/api/demo/zip-location?postcode=${encodeURIComponent(postcode)}`)
+  } catch (err) {
+    zipError.value = err.name === 'TimeoutError' || err.name === 'TypeError'
+      ? 'Could not reach the backend. Please try again.'
+      : err.message
+  } finally {
+    zipLoading.value = false
   }
 }
 
@@ -116,6 +143,7 @@ async function search() {
       <h1>Brian Booking Plus</h1>
       <p>Find a hotel stay, make a simulated booking, and manage your history.</p>
     </header>
+    <NearbyHotels />
     <section class="traveler-panel" aria-label="Demo traveler">
       <label for="traveler">Demo traveler</label>
       <select id="traveler" v-model="selectedUser" :disabled="busy || usersLoading" aria-describedby="traveler-help">
@@ -191,6 +219,28 @@ async function search() {
         </table>
       </div>
     </section>
-    <footer>Fictional hotels and sample prices for a classroom project. Prices exclude taxes and fees.</footer>
+    <section class="search-panel zip-panel" aria-labelledby="zip-heading" :aria-busy="zipLoading">
+      <h2 id="zip-heading">ZIP lookup demonstration</h2>
+      <form @submit.prevent="lookupDemoZip">
+        <label for="zip-code">U.S. ZIP code</label>
+        <div class="search-row">
+          <input id="zip-code" v-model="zipInput" type="text" inputmode="numeric" autocomplete="postal-code" pattern="[0-9]{5}" maxlength="5" required :disabled="zipLoading" aria-describedby="zip-help" />
+          <button type="submit" :disabled="zipLoading">{{ zipLoading ? 'Looking up…' : 'Look up ZIP' }}</button>
+        </div>
+        <p id="zip-help" class="muted">Enter a five-digit ZIP code to find its location.</p>
+      </form>
+      <div role="status" aria-live="polite">
+        <p v-if="zipLoading">Looking up ZIP {{ zipInput.trim() }}…</p>
+        <div v-else-if="zipLocation" class="table-scroll">
+          <table>
+            <caption>Location returned for ZIP {{ zipLocation.postcode }}</caption>
+            <thead><tr><th scope="col">Postcode</th><th scope="col">Country code</th><th scope="col">Locality</th><th scope="col">Latitude</th><th scope="col">Longitude</th></tr></thead>
+            <tbody><tr><td>{{ zipLocation.postcode }}</td><td>{{ zipLocation.country_code }}</td><td>{{ zipLocation.locality || 'Not provided' }}</td><td>{{ zipLocation.latitude }}</td><td>{{ zipLocation.longitude }}</td></tr></tbody>
+          </table>
+        </div>
+      </div>
+      <p v-if="zipError" role="alert" class="error">{{ zipError }}</p>
+    </section>
+    <footer>The hotel-name booking demo uses fictional hotels and sample prices, excluding taxes and fees. Nearby hotel search uses provider place data and does not offer bookings.</footer>
   </main>
 </template>

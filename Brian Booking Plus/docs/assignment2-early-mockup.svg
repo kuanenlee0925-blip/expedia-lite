@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="900" viewBox="0 0 1080 900" role="img" aria-labelledby="title desc">
+<title id="title">Brian Booking Plus — early hotel search and shortlist mockup</title>
+<desc id="desc">Design sketch dated September 29 2026, before hotel map and shortlist implementation. ZIP search sits above a hotel list and map placeholder, with a saved shortlist below and separate loading and error states. All place examples are fictional placeholders.</desc>
+<style>text{font-family:Arial,sans-serif;fill:#19364d;font-size:16px}.small{font-size:13px;fill:#536a7b}.heading{font-size:24px;font-weight:bold}.label{font-weight:bold}.white{fill:white}.panel{fill:white;stroke:#d4dee6}.button{fill:#193c55}.selected{fill:#eaf4fc;stroke:#2682bd;stroke-width:2}</style>
+<rect width="1080" height="900" fill="#f4f7fa"/>
+<text x="36" y="34" class="small">EARLY MOCKUP · 2026-09-29 · DESIGN ONLY · FICTIONAL PLACEHOLDERS</text>
+<text x="36" y="75" class="heading">Brian Booking Plus</text>
+<text x="36" y="102">Find nearby hotels. Keep a shortlist for later.</text>
+<rect x="36" y="122" width="1008" height="105" rx="10" class="panel"/>
+<text x="56" y="150" class="label">U.S. ZIP code</text>
+<rect x="56" y="162" width="235" height="44" rx="5" class="panel"/><text x="72" y="190">16802</text>
+<rect x="305" y="162" width="165" height="44" rx="5" class="button"/><text x="333" y="190" class="white">Find hotels</text>
+<text x="494" y="178" class="small">Within 5 km of the verified ZIP location</text>
+<text x="494" y="200" class="small">Places only — no room availability or booking prices</text>
+<text x="36" y="257" class="label">Hotels near ZIP 16802</text>
+<text x="36" y="280" class="small">Show returned count and request limit here; results are not exhaustive.</text>
+<rect x="36" y="298" width="405" height="110" rx="8" class="selected"/>
+<text x="54" y="325" class="label">1 · Example hotel A</text><text x="54" y="348" class="small">Provider address when available</text>
+<text x="54" y="382" class="small">Selected on map</text><rect x="314" y="362" width="108" height="32" rx="5" class="button"/><text x="349" y="384" class="white">Save</text>
+<rect x="36" y="420" width="405" height="110" rx="8" class="panel"/>
+<text x="54" y="447" class="label">2 · Example hotel B</text><text x="54" y="470" class="small">Address not provided</text><text x="54" y="507" class="small">Select to highlight its marker</text><text x="345" y="507" class="label">Saved ✓</text>
+<rect x="460" y="298" width="584" height="232" rx="8" fill="#eaf0f5" stroke="#d4dee6"/>
+<text x="482" y="326" class="label">Leaflet map area</text><text x="482" y="349" class="small">Placeholder only — no geographic positions drawn</text>
+<rect x="491" y="376" width="44" height="40" rx="5" class="button"/><text x="508" y="402" class="white">1</text>
+<rect x="550" y="376" width="44" height="40" rx="5" class="panel"/><text x="567" y="402">2</text>
+<text x="614" y="390" class="small">Selecting marker 1 selects hotel A.</text><text x="614" y="412" class="small">Selecting a list item opens its marker.</text>
+<text x="482" y="472" class="small">Use real returned coordinates in the implementation.</text>
+<text x="482" y="509" class="small">Visible Leaflet, tile-provider, and data-source attribution</text>
+<rect x="36" y="552" width="1008" height="130" rx="10" class="panel"/>
+<text x="56" y="583" class="heading">Saved shortlist</text><text x="56" y="608" class="small">Saved place details remain available after restarting or searching another ZIP.</text>
+<text x="56" y="648" class="label">Example hotel B</text><text x="266" y="648" class="small">Saved snapshot · ZIP 16802 · address unavailable</text>
+<rect x="909" y="620" width="113" height="42" rx="5" fill="#fff0ef"/><text x="937" y="647">Remove</text>
+<text x="36" y="719" class="label">Alternate states to implement</text>
+<text x="36" y="748" class="small">Loading: clear old search results; disable repeated searches; keep saved shortlist available.</text>
+<text x="36" y="773" class="small">Invalid ZIP: “Enter a five-digit U.S. ZIP code.” · Unresolved: “ZIP could not be resolved.”</text>
+<text x="36" y="798" class="small">Empty: “No hotels returned within 5 km.” · Failure: “Hotel search failed. Please try again.”</text>
+<text x="36" y="823" class="small">Rate limit: “Service limit reached. Try again later.” · Save/remove failure: retain last confirmed state.</text>
+<text x="36" y="860" class="small">Mobile: stack list, map, and shortlist. Existing sample hotel search and bookings remain separate.</text>
+</svg>

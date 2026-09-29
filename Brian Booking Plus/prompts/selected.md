@@ -8,4 +8,4 @@ Implementation interpretation: create a local Vue frontend and Python/FastAPI CS
 
 Part 2 interpretation: preserve Part 1, rename the current application to Brian Booking Plus, develop SQLite seeding and frontend booking CRUD on a feature branch, verify actual persistence through API tests and browser actions, and leave the student's manual review and personal demonstration clearly identified before the final merge and submission.
 
-Publication request, September 29: “can you also update the part 2 update to github. like the report part”. The student previously supplied the personal demonstration MP4. Publish Part 2 and its report with actual evidence; preserve newer local Assignment 2 work and do not invent confirmation of a manual source review.
+Publication request, September 29: “can you also update the part 2 update to github. like the report part”. Published the isolated Part 2 application and report to GitHub, preserving newer local Assignment 2 work and recording actual checks without inventing student review confirmation.

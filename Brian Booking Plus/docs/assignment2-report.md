@@ -1,0 +1,71 @@
+# Assignment 2 — hotel search, map, and persistent shortlist
+
+Local report draft, September 29, 2026. This is separate from the older
+sample-booking Part 2 report at the project root.
+
+## Project access and startup
+
+Existing repository: https://github.com/kuanenlee0925-blip/expedia-lite
+
+**Assessed Assignment 2 commit: pending student review and publication.**
+The earlier booking checkpoint does not include this work. Follow
+[README setup and configuration](../README.md). Open http://127.0.0.1:5173
+with FastAPI on port 8000. The project-root `.env` is backend-only; restart
+the backend after changing it. Never include its contents in evidence.
+The health endpoint reports configuration status without revealing the key.
+
+## Research, design, and implementation
+
+[Research and early mockup](assignment2-research-and-design.md) covers both
+the hotel list/map and shortlist additions. The saved shortlist appears below
+the search so it remains available when live results change. The implemented
+list scrolls to keep a long provider response from overwhelming the map.
+
+Vue Views: `frontend/src/NearbyHotels.vue` and `HotelMap.vue`.
+FastAPI routes: `backend/main.py`. Controllers: `backend/zip_lookup.py`,
+`places.py`, and `shortlist.py`. Configuration: `backend/config.py`.
+External place snapshots and SQLite tables form the data model independently
+of sample hotels that require a price. AGENTS.md records these responsibilities.
+
+A submitted ZIP flows from Vue to `/api/hotels`, through postcode verification
+and Geoapify Places, back to normalized results and synchronized Leaflet markers.
+The radius is 5 km around the provider's verified postcode point, not the user's
+location. At most 20 results are requested; no exhaustive coverage is claimed.
+Snapshots are saved locally by provider place ID and remain after backend restart.
+
+## Demonstration and verification
+
+**New screen-recorded demo link: pending.** The older booking video does not
+demonstrate this assignment. [Verification record](assignment2-verification.md)
+includes live ZIP 16802 observations, automated fixture instructions, expected
+versus observed results, screenshots, SQLite evidence, and explicit limitations.
+
+Suggested recording: show health status; search 16802; select a list item and
+another marker; save a hotel twice to demonstrate duplicate protection; refresh;
+restart the backend; show the retained shortlist; remove the item; then show
+the fixture checks. Do not show terminals or editors containing credentials.
+
+## AI disclosure and evidence log
+
+Tool: OpenAI Codex desktop coding agent, with shell tools and browser automation.
+**Specific selected model: confirm from the app before submission.** The agent
+implemented provider normalization, SQLite shortlist operations, Vue/Leaflet UI,
+mocked tests, and these draft notes. Browser observations were performed by the
+agent and do not stand in for the student's personal review.
+
+Selected prompt/decision evidence:
+
+- Student requested completion of missing hotel search/map and persistent
+  shortlist, then instructed the agent to continue. This maps to `places.py`,
+  `shortlist.py`, `NearbyHotels.vue`, and `HotelMap.vue`.
+- Student explicitly approved: “Approve installing Leaflet 1.9.4.” The exact
+  install updated frontend/package.json and package-lock.json; the build passed.
+- Earlier ZIP prompts required backend-only credentials and sanitized provider
+  errors. The new Places controller reuses that configuration and HTTP capability.
+- Revised approaches: test syntax correction, closing HTTP errors, and making
+  the live results list scrollable are recorded in the verification notes.
+
+Before submitting each part, review the implementation, fill in the assessed
+commit and model, add the relevant new video link, and ensure every linked
+artifact is published and accessible to the instructor. Upload the finalized
+report as `report.md`. Screenshots alone do not satisfy the recorded-demo item.

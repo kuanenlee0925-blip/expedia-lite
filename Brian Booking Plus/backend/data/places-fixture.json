@@ -1,0 +1,8 @@
+{
+  "_label": "Synthetic fixed test fixture. Not live Geoapify data or real hotels.",
+  "features": [
+    {"properties": {"place_id": "fixture-hotel-a", "name": "Fixture Hotel A", "formatted": "Synthetic address A", "lat": 40.804, "lon": -77.86}},
+    {"properties": {"place_id": "fixture-hotel-b", "lat": 40.805, "lon": -77.85}},
+    {"properties": {"place_id": "fixture-outside", "name": "Outside radius", "lat": 41.9, "lon": -77.85}}
+  ]
+}

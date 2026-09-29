@@ -12,6 +12,11 @@ label { display: block; font-weight: 650; margin-bottom: 10px; }
 input { flex: 1; min-width: 0; padding: 13px 15px; border: 1px solid #8b9fac; border-radius: 6px; font: inherit; }
 select { padding: 12px; border: 1px solid #8b9fac; border-radius: 6px; font: inherit; color: inherit; background: white; max-width: 100%; }
 .traveler-panel { margin-bottom: 26px; }
+.zip-panel { margin-top: 30px; }
+.zip-panel h2 { margin: 0 0 18px; }
+.zip-location { display: flex; flex-wrap: wrap; gap: 18px 32px; margin-bottom: 0; }
+.zip-location dt { font-size: 14px; color: #536a7b; }
+.zip-location dd { margin: 4px 0 0; overflow-wrap: anywhere; }
 .section-title { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; }
 .history { margin-top: 34px; }
 .history .date { margin-top: 0; }
