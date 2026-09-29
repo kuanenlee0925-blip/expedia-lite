@@ -187,3 +187,9 @@ The seven tests create disposable databases and check seeding, joins, all CRUD a
 The Part 2 publication contains SQLite booking CRUD, screenshots, and the student video link. The application checkpoint is [0743984](https://github.com/kuanenlee0925-blip/expedia-lite/commit/0743984eb768de1605ff62ed8fd0b4b33a4f35e3); all seven backend tests and the frontend build passed after merging into main on September 29, 2026. The existing GitHub repository keeps its `expedia-lite` URL; the `part1` tag preserves the original checkpoint. See [report.md](report.md) for the exact published application commit and actual checks. The required student VS Code source scan has not been separately confirmed. Upload report.md to Canvas after completing that review; GitHub publication is not Canvas submission. [Part 1 report archive](docs/part1-report.md) preserves the prior report. Newer Assignment 2 ZIP/nearby-hotel work is outside this checkpoint.
 
 This local working folder also contains newer ZIP lookup, nearby-hotel, and shortlist work. Those additions were subsequently published in Assignment 2 application commit `2a979ce81aa70b45c50f962c47b0ba2a27c0ee0e`; they remain outside the earlier booking checkpoint.
+
+## Assignment 2 student recording
+
+[Watch the ZIP hotel search demonstration (MP4, 55 seconds)](https://github.com/kuanenlee0925-blip/expedia-lite/raw/refs/heads/main/media/assignment2-part1-demonstration.mp4).
+This is separate from the older booking demonstration. See the Assignment 2
+report for observed behavior and remaining evidence gaps.

@@ -9,3 +9,9 @@ Vue and Python/FastAPI travel application with SQLite hotel search and simulated
 - [Preserved Part 1 checkpoint](https://github.com/kuanenlee0925-blip/expedia-lite/tree/part1)
 
 The recording shows the earlier Expedia Lite name. The report identifies the exact Part 2 application checkpoint and verification evidence.
+
+## Assignment 2 student recording
+
+[Watch the ZIP hotel search demonstration (MP4, 55 seconds)](https://github.com/kuanenlee0925-blip/expedia-lite/raw/refs/heads/main/media/assignment2-part1-demonstration.mp4).
+This is separate from the older booking demonstration. See the Assignment 2
+report for observed behavior and remaining evidence gaps.

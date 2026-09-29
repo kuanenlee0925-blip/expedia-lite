@@ -58,7 +58,11 @@ and verify persistence; unrelated processes were preserved.
 Not verified here: full browser-process close/reopen, every control through a
 keyboard-only journey, narrow mobile layout, UI rendering under mocked provider
 failure/empty/quota responses, browser Network-panel credential inspection,
-or a screen-recorded Assignment 2 demonstration. Backend fixtures cover the
+or all requirements in a recorded demonstration. The student subsequently supplied
+a 55-second video showing searches for 16802 and 33647, loading, results/maps,
+saves, and invalid input 123. See the [report video link](assignment2-report.md).
+Visual frames were reviewed; audio was not assessed. The video does not clearly
+show both directions of list/map selection or health status. Backend fixtures cover the
 provider error cases; they are not a claim of browser-level verification.
 The tests do not prove future provider coverage or availability. Following verification, application commit `2a979ce81aa70b45c50f962c47b0ba2a27c0ee0e` was published to GitHub
 at the student's explicit request. No Canvas submission or instructor review

@@ -28,6 +28,6 @@ Lantern Hotel. See `docs/assignment2-verification.md` for evidence and limits,
 and `docs/assignment2-report.md` for the separate submission draft.
 
 Assignment 2 application commit `2a979ce81aa70b45c50f962c47b0ba2a27c0ee0e` was published to GitHub main at the student's explicit request. The older root
-report/video remain for the previous booking assignment. New recorded demo, final student review, and model confirmation remain pending.
+report/video remain for the previous booking assignment. Student video is linked in the Assignment 2 report. Supplemental list/map selection and health-status evidence, final student review, and model confirmation remain pending.
 Backend and Vite are running on ports 8000 and 5173. Do not print `.env` or
 provider request URLs. Preserve saved database and unrelated processes.

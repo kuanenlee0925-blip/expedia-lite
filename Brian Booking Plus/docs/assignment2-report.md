@@ -35,8 +35,14 @@ Snapshots are saved locally by provider place ID and remain after backend restar
 
 ## Demonstration and verification
 
-**New screen-recorded demo link: pending.** The older booking video does not
-demonstrate this assignment. [Verification record](assignment2-verification.md)
+[Watch the student's Assignment 2 demonstration (MP4, approximately 55 seconds)](https://github.com/kuanenlee0925-blip/expedia-lite/raw/refs/heads/main/media/assignment2-part1-demonstration.mp4).
+Recorded September 29, 2026. Shows live searches for 16802 and 33647, loading,
+hotel lists/maps, shortlist saves, and invalid input 123. Both directions of
+list/map selection and the health status are not clearly demonstrated; a
+supplemental clip is still recommended. Audio was not assessed by the agent.
+The older booking video covers a separate assignment.
+
+[Verification record](assignment2-verification.md)
 includes live ZIP 16802 observations, automated fixture instructions, expected
 versus observed results, screenshots, SQLite evidence, and explicit limitations.
 
@@ -66,6 +72,6 @@ Selected prompt/decision evidence:
   the live results list scrollable are recorded in the verification notes.
 
 Before submitting each part, review the implementation, confirm the assessed
-commit and fill in the model, add the relevant new video link, and ensure every linked
+commit and fill in the model, add any supplemental demonstration, and ensure every linked
 artifact is published and accessible to the instructor. Upload the finalized
 report as `report.md`. Screenshots alone do not satisfy the recorded-demo item.
