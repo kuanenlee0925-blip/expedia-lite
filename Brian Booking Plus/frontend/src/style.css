@@ -10,6 +10,23 @@ header > p:last-child { color: #526b7b; font-size: 18px; }
 label { display: block; font-weight: 650; margin-bottom: 10px; }
 .search-row { display: flex; gap: 12px; max-width: 780px; }
 input { flex: 1; min-width: 0; padding: 13px 15px; border: 1px solid #8b9fac; border-radius: 6px; font: inherit; }
+select { padding: 12px; border: 1px solid #8b9fac; border-radius: 6px; font: inherit; color: inherit; background: white; max-width: 100%; }
+.traveler-panel { margin-bottom: 26px; }
+.section-title { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; }
+.history { margin-top: 34px; }
+.history .date { margin-top: 0; }
+.booking-id { display: block; max-width: 155px; overflow-wrap: anywhere; }
+.actions { display: flex; flex-wrap: wrap; gap: 8px; }
+td button { padding: 9px 12px; font-size: 13px; }
+button.secondary { background: #eaf0f5; color: #193c55; }
+button.secondary:hover { background: #d7e4ed; }
+button.danger { background: #fff0ef; color: #8b251d; }
+button.danger:hover { background: #f9d8d4; }
+.delete-confirm { margin-top: 10px; }
+.success { padding: 16px; color: #195c3b; background: #e7f4ec; border-radius: 6px; }
+td .status { display: inline-block; padding: 5px 8px; border-radius: 4px; margin: 0; }
+.status.confirmed { color: #195c3b; background: #e7f4ec; }
+.status.cancelled { color: #754a11; background: #fff3d8; }
 button { background: #193c55; color: white; border: none; border-radius: 6px; padding: 13px 30px; font: inherit; font-weight: 650; cursor: pointer; }
 button:hover { background: #285776; } button:disabled { opacity: .65; cursor: wait; }
 :focus-visible { outline: 3px solid #2682bd; outline-offset: 3px; }

@@ -1,4 +1,4 @@
-# Expedia Lite: Sample Data
+# Brian Booking Plus: Sample Data
 
 These four CSV files contain fictional classroom data for a small travel application. All hotel names, travelers, bookings, and prices are invented. City names are real. The files do not describe live hotel availability or real reservations.
 
