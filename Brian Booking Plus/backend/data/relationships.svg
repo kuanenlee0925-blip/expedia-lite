@@ -1,8 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1130" viewBox="0 0 1600 1130" role="img" aria-labelledby="title desc">
-<title id="title">Expedia Lite: how the CSV files connect</title>
+<title id="title">Brian Booking Plus: how the CSV files connect</title>
 <desc id="desc">Hotels and users are source records. One hotel can be used in many trips. One trip can be referenced by many bookings, and one user can have many bookings. trips.hotel_id matches hotels.hotel_id. bookings.trip_id matches trips.trip_id. bookings.user_id matches users.user_id.</desc>
 <rect width="1600" height="1130" fill="#F6F8FB"/>
-<text x="60" y="81.38" font-family="Arial, sans-serif" font-size="42" font-weight="bold" fill="#19354D">Expedia Lite: how the CSV files connect</text>
+<text x="60" y="81.38" font-family="Arial, sans-serif" font-size="42" font-weight="bold" fill="#19354D">Brian Booking Plus: how the CSV files connect</text>
 <text x="60" y="123.25" font-family="Arial, sans-serif" font-size="25" font-weight="normal" fill="#456177">Match the IDs to combine information. Each arrow means one source row can have many references.</text>
 <rect x="60" y="175" width="630" height="352" rx="14" fill="#FFFFFF" stroke="#C3CDD8" stroke-width="2"/>
 <rect x="60" y="175" width="630" height="67" rx="14" fill="#19354D" stroke="none" stroke-width="2"/>

@@ -1,8 +1,11 @@
-# Expedia Lite
+# Brian Booking Plus
 
 - Keep Vue in frontend/ and Python/FastAPI in backend/.
-- Part 1 reads supplied CSVs and searches hotel names, joining by hotel_id.
-- Preserve starter data and existing IDs. Do not implement Part 2 until requested.
+- Part 2 uses SQLite after a transactional one-time CSV seed. Never reseed an initialized database on startup.
+- Preserve starter data and existing IDs. Keep the Part 1 tag and commit unchanged.
+- All booking CRUD must be available through Vue and FastAPI. Cancellation retains the history row.
+- Use parameterized SQL, enforce foreign keys, and keep database files out of Git.
+- Run backend tests on temporary databases, never on the student's saved database.
 - Check installed dependencies before adding any; install in the project environment, then verify imports/builds.
 - Keep setup, design, report, prompts, and handoff consistent with actual behavior.
 - Record actual checks; never claim human review, browser evidence, commits, or pushes that did not happen.

@@ -1,3 +1,3 @@
-# Expedia Lite workspace
+# Brian Booking Plus workspace
 
-The application is in `Expedia Lite/`. Read its AGENTS.md before editing it.
+The application is in `Brian Booking Plus/`. Read its AGENTS.md before editing it.
