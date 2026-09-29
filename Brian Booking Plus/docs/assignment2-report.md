@@ -54,7 +54,7 @@ the fixture checks. Do not show terminals or editors containing credentials.
 ## AI disclosure and evidence log
 
 Tool: OpenAI Codex desktop coding agent, with shell tools and browser automation.
-**Specific selected model: confirm from the app before submission.** The agent
+**Specific selected model: GPT-6 Astra**, confirmed by the student on September 29, 2026. The agent
 implemented provider normalization, SQLite shortlist operations, Vue/Leaflet UI,
 mocked tests, and these draft notes. Browser observations were performed by the
 agent and do not stand in for the student's personal review.
@@ -72,6 +72,6 @@ Selected prompt/decision evidence:
   the live results list scrollable are recorded in the verification notes.
 
 Before submitting each part, review the implementation, confirm the assessed
-commit and fill in the model, add any supplemental demonstration, and ensure every linked
+commit, add any supplemental demonstration, and ensure every linked
 artifact is published and accessible to the instructor. Upload the finalized
 report as `report.md`. Screenshots alone do not satisfy the recorded-demo item.
