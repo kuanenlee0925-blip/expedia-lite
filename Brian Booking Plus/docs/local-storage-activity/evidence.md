@@ -13,8 +13,8 @@ not a claim that the student's five manual benchmarks are complete.
   `assignment2_part2_in_class` is prepared in the isolated checkout at
   `C:/Users/kuane/AppData/Local/Temp/brian-booking-plus-assignment2-publish-20260929`.
   The running application stays in the existing Documents folder and uses
-  the existing database. New work is mirrored to the feature checkout for
-  review; it is not yet committed or pushed. The older original checkout's
+  the existing database. Activity application checkpoint [7a0b188f3dc3d385f1a9f520ba28cc4f091d7160](https://github.com/kuanenlee0925-blip/expedia-lite/commit/7a0b188f3dc3d385f1a9f520ba28cc4f091d7160)
+  was committed and pushed to `assignment2_part2_in_class` on October 1 at the student's request. The older original checkout's
   branch was not switched over its existing working changes.
 - New additive tables preserve Assignment 1 data; Part 1 provider endpoints,
   request/response contract, ZIP controller, and Leaflet component are preserved.

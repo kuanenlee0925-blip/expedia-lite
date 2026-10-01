@@ -14,9 +14,9 @@ by fixture checks, and no new dependency was installed.
 
 The feature branch assignment2_part2_in_class is checked out in
 C:/Users/kuane/AppData/Local/Temp/brian-booking-plus-assignment2-publish-20260929.
-Selected changes are mirrored there, uncommitted for review. Runtime files and
+Activity application checkpoint 7a0b188f3dc3d385f1a9f520ba28cc4f091d7160 is committed and pushed to that branch. Runtime files and
 saved database stay in the original Documents folder. Original checkout branch
-is unchanged. No new code was pushed; published Part 1 remains preserved.
+is unchanged. The feature branch is published; main and the published Part 1 checkpoint remain preserved.
 Next: student manually inspect DB Browser, perform live Add/Remove and Network
 checks, edit a dated row, click Write Changes, repeat ZIP search, and capture evidence.
 
