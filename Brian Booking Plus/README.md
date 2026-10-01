@@ -1,5 +1,38 @@
 # Brian Booking Plus
 
+## October 1 activity: local hotel storage
+
+Use **Add to Local** in the nearby hotel results, then repeat the ZIP search.
+The page first requests `GET /api/local-hotels?postcode=...`. Saved matches
+are labeled **Saved locally** and show dated simulated rates and room counts.
+Only a successful empty lookup falls back to the unchanged Part 1
+`GET /api/hotels?postcode=...`. A failed local lookup shows an error.
+`GET /api/local-hotels/status` supplies saved IDs before displaying API results.
+Map and list selection continue to use the original provider place IDs.
+
+`POST /api/local-hotels` takes `{hotel_id, center}` from the current result;
+hotel details are taken from the backend's previously returned provider snapshot.
+It saves the hotel and searched ZIP association, and inserts October 10–14,
+2026 nights with schema defaults of 10000 cents and 20 rooms. Repeated saves
+do not replace snapshots or edited nightly values. `DELETE /api/local-hotels?hotel_id=...`
+removes that saved hotel and its related ZIP/night records in one transaction.
+The earlier **Saved shortlist** remains separate and is preserved; use **Add
+to Local**, not its older **Save hotel** button, for this graded activity.
+
+The database remains `backend/storage/expedia.sqlite3`. Additive tables are
+`saved_hotels`, `demo_hotel_nights`, `saved_zip_locations`, and `saved_hotel_zips`.
+The database initialization and original Assignment 1 tables are unchanged.
+`backend/local_hotels.py` handles storage; `backend/local_hotel_routes.py`
+validates local endpoints; `frontend/src/localHotelSearch.js` enforces lookup
+order. No dependencies were added. Use the existing startup commands below.
+Restart Python after code changes; committed DB Browser rate edits need only
+a new ZIP search, not a backend restart.
+
+Read the [manual demonstration checklist](docs/local-storage-activity/manual-checklist.md)
+and [verification/evidence template](docs/local-storage-activity/evidence.md).
+Automated checks do not replace your DB Browser **Write Changes** demonstration.
+Additional frontend check: `node --test frontend/src/localHotelSearch.test.js`.
+
 ## Assignment 2: nearby hotels and shortlist
 
 The new **Nearby hotels** panel accepts a five-digit ZIP string and calls

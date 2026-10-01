@@ -14,6 +14,8 @@ from database import DEFAULT_DB_PATH, connect, initialize
 from zip_lookup import ZipConfigurationError, ZipLookupError, ZipRateLimitError, lookup_zip
 from places import search_hotels
 import shortlist
+from local_hotels import initialize_local_hotels
+from local_hotel_routes import local_router
 
 STAY_SELECT = """SELECT h.hotel_id, h.hotel_name, h.city, h.state, h.nightly_rate_usd,
     t.trip_id, t.trip_name, t.check_in, t.check_out
@@ -76,9 +78,11 @@ def create_app(db_path: Path | None = None):
     async def lifespan(app):
         initialize(path)
         shortlist.initialize_shortlist(path)
+        initialize_local_hotels(path)
         yield
 
     app = FastAPI(title="Brian Booking Plus", version="2.0.0", lifespan=lifespan)
+    app.include_router(local_router(path))
 
     @app.get('/api/hotels')
     def hotels(postcode: str = Query(pattern=r'^[0-9]{5}$', min_length=5, max_length=5)):

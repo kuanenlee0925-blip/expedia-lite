@@ -1,3 +1,25 @@
+# October 1 local hotel activity — ready for student manual checks
+
+The original runtime folder now has additive local hotel/night tables and
+Add to Local / Remove from Local controls. Search reads local data first;
+only successful empty local lookup falls back to the unchanged Part 1 route.
+All 31 backend tests, 5 frontend lookup tests, and build pass. Agent fixture
+browser checks passed; no student DB Browser or Write Changes evidence is claimed.
+See docs/local-storage-activity/manual-checklist.md and evidence.md.
+
+Servers: frontend 5173, backend 8000; original database remains
+backend/storage/expedia.sqlite3. Existing row fingerprints matched after migration.
+The temporary fixture server on 8001 was stopped. No provider quota was consumed
+by fixture checks, and no new dependency was installed.
+
+The feature branch assignment2_part2_in_class is checked out in
+C:/Users/kuane/AppData/Local/Temp/brian-booking-plus-assignment2-publish-20260929.
+Selected changes are mirrored there, uncommitted for review. Runtime files and
+saved database stay in the original Documents folder. Original checkout branch
+is unchanged. No new code was pushed; published Part 1 remains preserved.
+Next: student manually inspect DB Browser, perform live Add/Remove and Network
+checks, edit a dated row, click Write Changes, repeat ZIP search, and capture evidence.
+
 # Current handoff
 
 ## Working

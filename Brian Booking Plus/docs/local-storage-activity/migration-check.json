@@ -1,0 +1,36 @@
+{
+  "original_records_unchanged": true,
+  "records": {
+    "hotels": {
+      "count": 8,
+      "sha256": "fa7383c49298d3c214d730b5cf3e439905bb67c22d9f8d54fed5273f1d199948"
+    },
+    "trips": {
+      "count": 12,
+      "sha256": "0e1f146f2d7d2b7427a58ad068caea723d587ec42607b042cb0bf159e77ec05b"
+    },
+    "users": {
+      "count": 6,
+      "sha256": "b2fb076355aca7d024f607afb3dbedc504a1762b9cdc636484c663ae3099c37e"
+    },
+    "bookings": {
+      "count": 11,
+      "sha256": "dcefcd5e718ea891e50c2d0e39af20107c4406331f912c4102b4267ffa0e5973"
+    },
+    "shortlist": {
+      "count": 7,
+      "sha256": "f61c71c22b7863daa4045612bbbd64743bb98205f479f61633eda51b4157cf63"
+    },
+    "discovered_places": {
+      "count": 23,
+      "sha256": "908e2cb7c7cd9b13c5de79775fdcbdd96df2b36532662826060e4a2e584153c0"
+    }
+  },
+  "new_schema": {
+    "saved_hotels": "CREATE TABLE saved_hotels (\n            hotel_id TEXT PRIMARY KEY NOT NULL,\n            name TEXT, address TEXT,\n            latitude REAL NOT NULL CHECK(latitude BETWEEN -90 AND 90),\n            longitude REAL NOT NULL CHECK(longitude BETWEEN -180 AND 180))",
+    "demo_hotel_nights": "CREATE TABLE demo_hotel_nights (\n            hotel_id TEXT NOT NULL REFERENCES saved_hotels(hotel_id) ON DELETE CASCADE,\n            stay_date TEXT NOT NULL CHECK(\n                stay_date GLOB '[0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9]'\n                AND date(stay_date, '+0 days') IS NOT NULL\n                AND date(stay_date, '+0 days') = stay_date),\n            nightly_rate_cents INTEGER NOT NULL DEFAULT 10000\n                CHECK(typeof(nightly_rate_cents) = 'integer' AND nightly_rate_cents >= 0),\n            rooms_available INTEGER NOT NULL DEFAULT 20\n                CHECK(typeof(rooms_available) = 'integer' AND rooms_available >= 0),\n            PRIMARY KEY(hotel_id, stay_date))",
+    "saved_hotel_zips": "CREATE TABLE saved_hotel_zips (\n            hotel_id TEXT NOT NULL REFERENCES saved_hotels(hotel_id) ON DELETE CASCADE,\n            postcode TEXT NOT NULL REFERENCES saved_zip_locations(postcode),\n            PRIMARY KEY(hotel_id, postcode))",
+    "saved_zip_locations": "CREATE TABLE saved_zip_locations (\n            postcode TEXT PRIMARY KEY NOT NULL CHECK(postcode GLOB '[0-9][0-9][0-9][0-9][0-9]'),\n            country_code TEXT NOT NULL CHECK(country_code = 'us'),\n            latitude REAL NOT NULL CHECK(latitude BETWEEN -90 AND 90),\n            longitude REAL NOT NULL CHECK(longitude BETWEEN -180 AND 180),\n            locality TEXT)"
+  },
+  "foreign_key_violations": []
+}
